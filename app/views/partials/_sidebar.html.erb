@@ -1,0 +1,19 @@
+<% if params[:controller] == 'about'%>
+  <div class="highlight">
+    <h3>Location Info</h3>
+    <ul>
+      <li> CDE PRI Hidalgo</li>
+      <li>Blvd. Luis Donaldo Colosio 2013 </li>
+      <li>Col. Ex Hacienda de Coscotitlán</li>
+      <li>(771) 71-702-27</li>
+      <li>prihidalgooficial@gmail.com</li>
+    </ul>
+  </div>
+<% end %>
+<% if params[:controller] == 'reports' && params[:action] == 'index' || params[:action] == 'show'%>
+  <div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action">Municipios</a>
+    <a href="#" class="list-group-item list-group-item-action">Distritos Locales</a>
+    <a href="#" class="list-group-item list-group-item-action">Distritos Federales</a>
+  </div>
+<% end %>
