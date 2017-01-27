@@ -1,0 +1,22 @@
+<h2>Agregar Diputado Federal</h2>
+
+<%= form_for @federal do |f| %>
+  <% if @federal.errors.any? %>
+    <% @federal.errors.full_messages.each do |msg| %>
+      <div class="alert alert-danger"><%= msg %></div>
+    <% end %>
+  <% end %>
+  <div class="form-group">
+    <%= f.label :first_name %> <br>
+    <%= f.text_field :first_name, class: "form-control"%> <br>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :last_name %> <br>
+    <%= f.text_field :last_name, class: "form-control"%> <br>
+  </div>
+
+  <%= f.submit "Guardar", class: "btn btn-primary" %>
+  <%= link_to "Cancelar", federals_path, class: "btn btn-default" %>
+
+<% end %>

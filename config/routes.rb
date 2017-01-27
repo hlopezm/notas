@@ -1,4 +1,32 @@
 Rails.application.routes.draw do
+  get 'federals/new'
+
+  get 'federals/create'
+
+  get 'federals/update'
+
+  get 'federals/edit'
+
+  get 'federals/destroy'
+
+  get 'federals/index'
+
+  get 'federals/show'
+
+  get 'locals/new'
+
+  get 'locals/create'
+
+  get 'locals/update'
+
+  get 'locals/edit'
+
+  get 'locals/destroy'
+
+  get 'locals/index'
+
+  get 'locals/show'
+
   get 'results/new'
 
   get 'results/create'
@@ -63,8 +91,9 @@ Rails.application.routes.draw do
 
   resources :reports
   resources :categories
+  resources :locals
+  resources :federals
   resources :elections
-  resources :results
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

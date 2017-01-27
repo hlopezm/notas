@@ -10,9 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20170124192400) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "federals", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "locals", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reports", force: :cascade do |t|
+    t.string   "nombre"
+    t.integer  "category_id"
+    t.integer  "local_id"
+    t.integer  "federal_id"
+    t.string   "pdte_mpal"
+    t.date     "renovacion_cdm"
+    t.text     "situacion_mpio"
+    t.text     "situacion_cdm"
+    t.text     "temas_reunion"
+    t.text     "observaciones"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "image"
+  end
 
 end

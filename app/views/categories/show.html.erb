@@ -1,2 +1,14 @@
-<h1>Categories#show</h1>
-<p>Find me in app/views/categories/show.html.erb</p>
+<h2><%= @category.name %></h2>
+<div id="reports-index">
+  <% @reports.each_slice(4) do |report| %>
+    <div class="row">
+      <% report.each do |report| %>
+        <div class="col-sm-3">
+          <h3><%= report.nombre %></h3>
+          <%= image_tag(report.image) unless report.image.blank? %>
+          <%= link_to 'Leer mas...', report_path(report), class: "btn btn-secondary" %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

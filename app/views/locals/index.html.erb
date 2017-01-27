@@ -1,0 +1,15 @@
+<h2>Diputados Locales</h2>
+
+<table class="table table-striped">
+  <tr>
+    <th>Nombre</th>
+    <th>Acciones</th>
+  </tr>
+  <% @locals.each do |local| %>
+    <tr>
+      <td><%= local.first_name %> <%= local.last_name %></td>
+      <td><%= link_to 'Editar', edit_local_path(local.id) %> |
+        <%= link_to 'Borrar', local_path(local), method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+    </tr>
+  <% end %>
+</table>
