@@ -1,0 +1,12 @@
+%h2 Categorías
+%table.table.table-striped
+  %tr
+    %th Nombre
+    %th Acciones
+  - @categories.each do |category|
+    %tr
+      %td= category.name
+      %td
+        = link_to 'Editar', edit_category_path(category.id)
+        |
+        \#{link_to 'Borrar', category_path(category), method: :delete, data: { confirm: 'Estas seguro?' }}

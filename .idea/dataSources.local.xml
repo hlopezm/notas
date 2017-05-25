@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails notas: development" uuid="1a255ae6-431f-4228-a74c-f901c2a83401">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+    </data-source>
+    <data-source name="Rails notas: test" uuid="17645b2c-a01e-4e51-99f0-a82bf77b38af">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+    </data-source>
+    <data-source name="Rails notas: production" uuid="ace38a5b-fe3c-4868-acc6-836cbaa6a19e">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <user-name>notas</user-name>
+    </data-source>
+  </component>
+</project>

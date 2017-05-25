@@ -7,12 +7,9 @@ body {
   line-height: 1.5em;
 }
 
-header {
+.container {
   padding-top: 15px;
-  background: #a2a2a2;
-  color: #fff;
-  height: 105px;
-  margin-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 html {
@@ -21,7 +18,7 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 .footer {
   position: fixed;

@@ -1,0 +1,35 @@
+%nav.navbar.navbar-toggleable-md.navbar-inverse.bg-inverse
+  %button.navbar-toggler.navbar-toggler-right{"aria-controls" => "navbarsExampleDefault", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarsExampleDefault", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  %a.navbar-brand{:href => "/"}
+    %img.img.d-inline-block.align-top{:alt => "", :height => "30", :src => "/assets/brand/logopri.svg", :width => "30"}/
+    CDE Hidalgo
+  #navbarsExampleDefault.collapse.navbar-collapse
+    %ul.nav.navbar-nav.mr-auto
+      %li{:class => "#{params[:controller] == 'reports' ? 'active' : ''}"}
+        = link_to "Municipios", root_path, :class => "nav-item nav-link"
+      %li.nav-item.dropdown
+        %a.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} Filtro por Categoria
+        .dropdown-menu
+          - if params[:controller] == 'reports' && params[:action] == 'index' || params[:action] == 'show'
+            .list-group
+              - @categories.each do |category|
+                = link_to category.name, category_path(category.id), class: "list-group-item list-group-item-action"
+    %form.form-inline.my-2.my-lg-0
+      %input.form-control.mr-sm-2{:placeholder => "Search", :type => "text"}/
+      %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
+    .dropdown.navbar-right
+      %button#dropdownMenuButton.btn.btn-success.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
+        Agregar
+      .dropdown-menu{"aria-labelledby" => "dropdownMenuButton"}
+        = link_to "Reporte", new_report_path, :class => "dropdown-item"
+        = link_to "Categoría", new_category_path, :class => "dropdown-item"
+        = link_to "Dip. Local", new_local_path, :class => "dropdown-item"
+        = link_to "Dip. Federal", new_federal_path, :class => "dropdown-item"
+    %ul.nav.navbar-nav.mr-auto
+      %li.nav-item.dropdown
+        %a.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"} Administrar
+        .dropdown-menu
+          = link_to "Categorías", categories_path, :class => "dropdown-item"
+          = link_to "Dip. Locales", locals_path, :class => "dropdown-item"
+          = link_to "Dip. Federales", federals_path, :class => "dropdown-item"

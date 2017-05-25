@@ -1,0 +1,41 @@
+#reports-show
+  %h2
+    = @report.nombre
+  .reports-show-left
+    = image_tag (@report.image)
+  .reports-show-right
+    %h3 Report info:
+    %ul
+      %li
+        %strong Categoría:
+        = @report.category.name
+      %li
+        %strong Pdte. Municipal:
+        = @report.pdte_mpal
+      %li
+        %strong Dip. Local:
+        = @report.local.first_name
+        = @report.local.last_name
+      %li
+        %strong Dip. Federal:
+        = @report.federal.first_name
+        = @report.federal.last_name
+      %li
+        %strong Renovación CDM:
+        = @report.renovacion_cdm
+      %li
+        %strong> Elecciones:
+        Imagenes
+      = link_to "Wikipedia","http://google.com", class: "btn btn-success", target: '_blank'
+  .clearfix
+  %h4 Situación Municipio:
+  %p= @report.situacion_mpio
+  %h4 Situación CDM:
+  %p= @report.situacion_cdm
+  %h4 Temas a tratar en reunión:
+  %p= @report.temas_reunion
+  %h4 Observaciones:
+  %p= @report.observaciones
+  %h2 Admin Functions
+  = link_to 'Editar', edit_report_path(@report.id)
+  | #{link_to 'Borrar', report_path(@report), method: :delete, data: {confirm: "Estas Seguro?" }}

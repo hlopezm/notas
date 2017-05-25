@@ -1,0 +1,14 @@
+%h2 Diputados Federales
+%table.table.table-striped
+  %tr
+    %th Nombre
+    %th Acciones
+  - @federals.each do |federal|
+    %tr
+      %td
+        = federal.first_name
+        = federal.last_name
+      %td
+        = link_to 'Editar', edit_federal_path(federal.id)
+        |
+        \#{link_to 'Borrar', federal_path(federal), method: :delete, data: { confirm: 'Estas seguro?' }}

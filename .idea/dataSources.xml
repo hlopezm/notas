@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Rails notas: development" uuid="1a255ae6-431f-4228-a74c-f901c2a83401">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:notas_development</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails notas: test" uuid="17645b2c-a01e-4e51-99f0-a82bf77b38af">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:notas_test</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails notas: production" uuid="ace38a5b-fe3c-4868-acc6-836cbaa6a19e">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:notas_production</jdbc-url>
+    </data-source>
+  </component>
+</project>

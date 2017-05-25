@@ -1,0 +1,8 @@
+#reports-index
+  - @reports.each_slice(4) do |report|
+    .row
+      - report.each do |report|
+        .col-sm-3
+          %h3= report.nombre
+          = image_tag(report.image) unless report.image.blank?
+          = link_to 'Leer mas...', report_path(report), class: "btn btn-secondary"

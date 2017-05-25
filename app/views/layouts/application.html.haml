@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title
+      = @page_title ? @page_title : 'Bienvenido'
+      | CDE Hidalgo
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+  %body
+    = render 'partials/nav'
+    %section
+      .container
+        .row
+          .col-md-12
+            / Alerts & Messages
+            - if flash[:notice]
+              .alert.alert-success= flash[:notice]
+            - if flash[:alert]
+              .alert.alert-danger= flash[:alert]
+            = yield
+    = javascript_include_tag 'application'

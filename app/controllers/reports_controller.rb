@@ -47,7 +47,6 @@ class ReportsController < ApplicationController
   def show
     @report = Report.find(params[:id])
     @categories = Category.all
-
   end
 
   private

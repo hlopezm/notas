@@ -1,0 +1,17 @@
+%h2 Editar Diputado Local
+= form_for @local do |f|
+  - if @local.errors.any?
+    - @local.errors.full_messages.each do |msg|
+      .alert.alert-danger= msg
+  .form-group
+    = f.label :first_name
+    %br/
+    = f.text_field :first_name, class: "form-control"
+    %br/
+  .form-group
+    = f.label :last_name
+    %br/
+    = f.text_field :last_name, class: "form-control"
+    %br/
+  = f.submit "Guardar", class: "btn btn-primary"
+  = link_to "Cancelar", locals_path, class: "btn btn-default"

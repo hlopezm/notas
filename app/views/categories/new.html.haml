@@ -1,0 +1,12 @@
+%h2 Agregar Categoría
+= form_for @category do |f|
+  - if @category.errors.any?
+    - @category.errors.full_messages.each do |msg|
+      .alert.alert-danger= msg
+  .form-group
+    = f.label :name
+    %br/
+    = f.text_field :name, class: "form-control"
+    %br/
+  = f.submit "Guardar", class: "btn btn-primary"
+  = link_to "Cancelar", categories_path, class: "btn btn-default"
